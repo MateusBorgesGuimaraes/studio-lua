@@ -1,0 +1,22 @@
+.headerNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerNav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-12);
+}
+
+.headerNav ul li a {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+    transition: ease-in-out 0.2s;
+}
+
+.headerNav ul li a:hover {
+    color: var(--color-gold-hover);
+}
