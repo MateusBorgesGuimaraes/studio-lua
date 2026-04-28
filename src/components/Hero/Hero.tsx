@@ -21,7 +21,18 @@ export const Hero = () => {
           <button className="btn btn-primary">AGENDAR HORARIO</button>
         </div>
       </div>
-      <div className={styles.right}></div>
+      <div className={styles.right}>
+        <div className={`${styles.targetLine} ${styles.lineTop}`}></div>
+        <div className={`${styles.targetLine} ${styles.lineBottom}`}></div>
+        <div className={`${styles.targetLine} ${styles.lineLeft}`}></div>
+        <div className={`${styles.targetLine} ${styles.lineRight}`}></div>
+
+        <div className={styles.circleOutlineRadius}>
+          <div className={styles.portrait}>
+            <img src="/home-image.jpg" alt="Modelo do salão" />
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
