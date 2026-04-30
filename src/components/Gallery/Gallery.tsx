@@ -1,7 +1,18 @@
-import { IMAGES } from "../../utils";
+import { useState } from "react";
+import { IMAGES, type Categories } from "../../utils";
 import styles from "./Gallery.module.css";
 
 export const Gallery = () => {
+  const [seeAll, setSeeAll] = useState(false);
+  const [category, setCategory] = useState<Categories | "Todos">("Todos");
+  let images = seeAll ? IMAGES : IMAGES.slice(0, 7);
+  images =
+    category === "Todos"
+      ? images
+      : IMAGES.filter((img) => {
+          return img.category === category;
+        }).slice(0, 7);
+
   return (
     <section className={`${styles.galleryContainer} `}>
       <div className={styles.side}>
@@ -20,20 +31,40 @@ export const Gallery = () => {
             </h2>
           </div>
           <div className={styles.btns}>
-            <button className="tag">Todos</button>
-            <button className="tag">Corte</button>
-            <button className="tag">Coloração</button>
-            <button className="tag">Tratamento</button>
+            <button
+              onClick={() => setCategory("Todos")}
+              className={`tag ${category === "Todos" ? "active" : ""}`}
+            >
+              Todos
+            </button>
+            <button
+              onClick={() => setCategory("Corte")}
+              className={`tag ${category === "Corte" ? "active" : ""}`}
+            >
+              Corte
+            </button>
+            <button
+              onClick={() => setCategory("Coloração")}
+              className={`tag ${category === "Coloração" ? "active" : ""}`}
+            >
+              Coloração
+            </button>
+            <button
+              onClick={() => setCategory("Tratamento")}
+              className={`tag ${category === "Tratamento" ? "active" : ""}`}
+            >
+              Tratamento
+            </button>
           </div>
         </div>
         <div className={styles.galleryGrid}>
-          {IMAGES.map((item, index) => {
+          {images.map((item, index) => {
             const extraClass =
               index === 0 ? styles.wide : index === 1 ? styles.tall : "";
 
             return (
               <div
-                key={item.src}
+                key={item.id}
                 className={`${styles.galleryItem} ${extraClass}`}
                 data-category={item.category}
               >
@@ -52,6 +83,15 @@ export const Gallery = () => {
               </div>
             );
           })}
+        </div>
+        <div className={styles.galleryFooter}>
+          <p>
+            Mostrando {images.length} de {IMAGES.length} resultados
+          </p>
+
+          <button onClick={() => setSeeAll(!seeAll)} className="btn btn-ghost">
+            {seeAll ? "VER MENOS" : "VER GALERIA COMPLETA"}
+          </button>
         </div>
       </div>
       <div className={`${styles.side} ${styles.sideRight}`}>

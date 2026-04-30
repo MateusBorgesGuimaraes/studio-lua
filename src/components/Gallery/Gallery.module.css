@@ -4,8 +4,9 @@
     display: grid;
     grid-template-columns: 48px 1fr 48px;
     width: 100%;
-    max-width: 960px;
+    max-width: 1240px;
     margin: 0 auto;
+    gap: 160px;
 }
 
 .side {
@@ -154,4 +155,15 @@
     top: 14px;
     right: 14px;
     letter-spacing: 0.05em;
+}
+
+.galleryFooter {
+    margin-top: var(--space-8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.galleryFooter p {
+    font-size: var(--text-md);
 }
