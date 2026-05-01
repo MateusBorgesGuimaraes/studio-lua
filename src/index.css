@@ -152,7 +152,7 @@ h1 {
     line-height: 90%;
 }
 h2 {
-    font-size: var(--text-2xl);
+    font-size: var(--text-3xl);
 }
 h3 {
     font-size: var(--text-lg);
