@@ -108,3 +108,72 @@
 .lineRight {
     right: 0;
 }
+
+@media (max-width: 1024px) {
+    .left {
+        padding-inline: var(--space-10);
+    }
+
+    .circleOutlineRadius {
+        width: 420px;
+        height: 420px;
+    }
+
+    .portrait {
+        width: 310px;
+        height: 310px;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroContainer {
+        grid-template-columns: 1fr;
+        height: 100dvh;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .left {
+        padding-inline: var(--space-8);
+        padding-top: var(--space-6);
+        padding-bottom: var(--space-10);
+        justify-content: center;
+    }
+
+    .infosLeft {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .left {
+        padding-inline: var(--space-6);
+    }
+}
+
+.decorativeText {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .decorativeText {
+        display: block;
+        position: absolute;
+        font-family: var(--font-serif);
+        font-size: clamp(3rem, 10vw, 6rem);
+        font-weight: 300;
+        color: var(--color-text-primary);
+        opacity: 0.04;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        writing-mode: vertical-rl;
+        letter-spacing: 0.1em;
+        line-height: 1;
+        pointer-events: none;
+        user-select: none;
+        white-space: nowrap;
+    }
+}

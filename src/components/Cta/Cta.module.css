@@ -4,3 +4,19 @@
     align-items: center;
     justify-content: space-between;
 }
+
+@media (max-width: 768px) {
+    .ctaContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-8);
+        margin-block: var(--space-10);
+    }
+}
+
+@media (max-width: 480px) {
+    .ctaContainer {
+        margin-block: var(--space-8);
+        gap: var(--space-6);
+    }
+}

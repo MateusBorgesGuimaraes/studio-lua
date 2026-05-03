@@ -324,3 +324,32 @@ strong {
     outline: 2px solid var(--color-gold);
     outline-offset: 3px;
 }
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: clamp(3.5rem, 14vw, 5.5rem);
+    }
+
+    h2 {
+        font-size: clamp(1.6rem, 6vw, 2.4rem);
+    }
+
+    p {
+        font-size: var(--text-md);
+    }
+
+    .tag {
+        font-size: var(--text-xs);
+        padding: 4px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: clamp(3rem, 13vw, 4.5rem);
+    }
+
+    h2 {
+        font-size: clamp(1.4rem, 5.5vw, 2rem);
+    }
+}

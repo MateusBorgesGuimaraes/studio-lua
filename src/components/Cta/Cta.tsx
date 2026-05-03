@@ -2,12 +2,12 @@ import styles from "./Cta.module.css";
 
 export const Cta = () => {
   return (
-    <section className={`${styles.ctaContainer} container`}>
+    <section id="contact" className={`${styles.ctaContainer} container`}>
       <div>
         <p className="eyebrow">Agende seu horário</p>
         <h2>
           Pronta para o seu <br />
-          <span className="dest">Pronta para o seu novo visual?</span>
+          <span className="dest">novo visual?</span>
         </h2>
         <p>
           Atendimento personalizado, com hora marcada. Entre em contato <br /> e

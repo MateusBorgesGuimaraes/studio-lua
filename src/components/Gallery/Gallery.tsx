@@ -14,7 +14,7 @@ export const Gallery = () => {
         }).slice(0, 7);
 
   return (
-    <section className={`${styles.galleryContainer} `}>
+    <section id="gallery" className={`${styles.galleryContainer} `}>
       <div className={styles.side}>
         <div className={styles.sideLineLong}></div>
         <div className={styles.sideDot}></div>

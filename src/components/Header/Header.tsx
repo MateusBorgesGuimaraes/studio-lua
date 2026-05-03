@@ -8,13 +8,13 @@ export const Header = () => {
         <Logo />
         <ul>
           <li>
-            <a href="#">Serviços</a>
+            <a href="#services">Serviços</a>
           </li>
           <li>
-            <a href="#">Galeria</a>
+            <a href="#gallery">Galeria</a>
           </li>
           <li>
-            <a href="#">Contato</a>
+            <a href="#contact">Contato</a>
           </li>
         </ul>
       </nav>

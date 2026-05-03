@@ -6,6 +6,7 @@ export const Hero = () => {
     <section className={styles.heroContainer}>
       <div className={styles.left}>
         <Header />
+        <div className={styles.decorativeText}>STUDIO LUA</div>
         <div className={styles.infosLeft}>
           <span className="eyebrow">Salão & Estética — São Paulo</span>
           <h1>

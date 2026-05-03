@@ -20,3 +20,26 @@
 .headerNav ul li a:hover {
     color: var(--color-gold-hover);
 }
+
+@media (max-width: 768px) {
+    .headerNav {
+        margin-bottom: var(--space-8);
+    }
+    .headerNav ul {
+        gap: var(--space-6);
+    }
+
+    .headerNav ul li a {
+        font-size: var(--text-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .headerNav ul {
+        gap: var(--space-4);
+    }
+
+    .headerNav ul li a {
+        font-size: var(--text-base);
+    }
+}

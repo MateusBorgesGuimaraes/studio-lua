@@ -7,3 +7,15 @@
 .logo span {
     color: var(--color-gold);
 }
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: var(--text-xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: var(--text-lg);
+    }
+}
